@@ -1,0 +1,36 @@
+/* ----------------------------------variables---------------------------------- */
+:root {
+  --color-primary: hsl(12, 88%, 59%);
+  --color-secondary: hsl(228, 39%, 23%);
+  --color-dark-blue: hsl(233, 12%, 13%);
+  --color-light-gray: hsl(0, 0%, 98%);
+  --color-pale-red: hsl(13, 100%, 96%);
+  --color-dark-gray: hsl(227, 12%, 61%);
+}
+/* ----------------------------------Resetters---------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* ----------------------------------typography---------------------------------- */
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 1.6rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-secondary);
+}
+p {
+  color: var(--color-dark-gray);
+}
+/* ----------------------------------typography---------------------------------- */
