@@ -33,6 +33,10 @@ h6 {
 p {
   color: var(--color-dark-gray);
 }
+.text {
+  font-size: 1.4rem;
+  line-height: 2;
+}
 
 /* ----------------------------------list---------------------------------- */
 .container {
@@ -297,6 +301,34 @@ p {
     font-size: 5rem;
   }
 }
+/* ----------------------------------Features---------------------------------- */
+.features {
+  margin-top: 10rem;
+}
+.features--title {
+  font-size: 3rem;
+  text-align: center;
+}
+.features--heading {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .features--heading {
+    width: 75%;
+    text-align: left;
+  }
+  .features--title {
+    font-size: 3.5rem;
+    text-align: left;
+    margin-top: 0;
+  }
+  .features--text {
+    width: 75%;
+  }
+}
+
 /* ----------------------------------footer---------------------------------- */
 .footer {
   padding: 0;
