@@ -38,6 +38,16 @@ p {
 .container {
   padding: 0 2.5rem;
 }
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0 5%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container {
+    padding: 0 16rem;
+  }
+}
 /* ----------------------------------list---------------------------------- */
 .list {
   list-style: none;
@@ -76,11 +86,12 @@ p {
   height: 3rem;
 }
 /* ----------------------------------grids--------------------------------- */
-.grid2x1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+@media screen and (min-width: 768px) {
+  .grid2x1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
-
 /* ----------------------------------media---------------------------------- */
 .media {
   width: 100%;
@@ -228,6 +239,62 @@ p {
   .nav--btn {
     display: block;
     margin: 0;
+  }
+}
+/* ----------------------------------Hero Section-------------------------- */
+.hero {
+  text-align: center;
+}
+.hero--image {
+  width: 100%;
+}
+.hero--title {
+  font-size: 3.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+.hero--text {
+  font-size: 1.4rem;
+  line-height: 2;
+  margin: 2rem 0 3.5rem;
+}
+.hero .btn {
+  margin-bottom: 10rem;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    margin-top: 10rem;
+  }
+  .hero--image {
+    order: 2;
+  }
+
+  .hero--content {
+    text-align: left;
+    width: 100%;
+    align-self: flex-end;
+  }
+  .hero--title {
+    font-size: 3.5rem;
+  }
+  .hero--text {
+    font-size: 1.3rem;
+    width: 75%;
+    margin: 4rem 0;
+  }
+  .hero .btn {
+    margin-bottom: 7rem;
+  }
+}
+@media screen and (min-width: 1124px) {
+  .hero--content {
+    text-align: left;
+    width: 75%;
+    align-self: flex-end;
+  }
+  .hero--title {
+    font-size: 5rem;
   }
 }
 /* ----------------------------------footer---------------------------------- */
