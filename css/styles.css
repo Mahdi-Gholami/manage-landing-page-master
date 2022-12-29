@@ -38,10 +38,12 @@ p {
   line-height: 2;
 }
 
-/* ----------------------------------list---------------------------------- */
+/* ----------------------------------body container---------------------------------- */
+
 .container {
   padding: 0 2.5rem;
 }
+
 @media screen and (min-width: 768px) {
   .container {
     padding: 0 5%;
@@ -49,7 +51,7 @@ p {
 }
 @media screen and (min-width: 1440px) {
   .container {
-    padding: 0 16rem;
+    padding: 0 12%;
   }
 }
 /* ----------------------------------list---------------------------------- */
@@ -78,6 +80,7 @@ p {
   background-color: var(--color-primary);
   color: var(--color-light-gray);
   font-weight: 500;
+  box-shadow: 0 5px 20px -8px var(--color-primary);
 }
 .btn--primary:hover {
   background-color: #ec7d62;
@@ -88,6 +91,41 @@ p {
 .icon {
   width: 3rem;
   height: 3rem;
+}
+/* ----------------------------------bgimages---------------------------------- */
+.bg-top {
+  position: absolute;
+  transform: scale(0.5, 0.5);
+  top: -25rem;
+  right: -30rem;
+
+  z-index: -1;
+}
+@media screen and (min-width: 768px) {
+  .bg-top {
+    position: absolute;
+    transform: scale(1, 1);
+    top: -18%;
+    right: -8%;
+    z-index: -1;
+  }
+}
+.bg-bottom {
+  position: absolute;
+  transform: scale(0.5, 0.5);
+  top: 30rem;
+  right: -100%;
+
+  z-index: -1;
+}
+@media screen and (min-width: 768px) {
+  .bg-bottom {
+    position: absolute;
+    transform: scale(1, 1);
+    top: 110rem;
+    left: -50rem;
+    z-index: -1;
+  }
 }
 /* ----------------------------------grids--------------------------------- */
 @media screen and (min-width: 768px) {
@@ -169,11 +207,11 @@ p {
 /* ----------------------------------Navbar---------------------------------- */
 
 .navbar {
-  height: 8rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  height: 10rem;
 }
 .logo {
   object-fit: cover;
@@ -185,13 +223,16 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-pale-red);
-  width: 100%;
+  background-color: white;
+  width: 90%;
   left: -100%;
   top: 80px;
+
+  margin: 1rem 5%;
+  padding: 2rem;
 }
 .nav--item {
-  padding: 0.5rem 0;
+  padding: 2.2rem 0;
   font-weight: 700;
 }
 .nav--hamburger {
@@ -225,6 +266,9 @@ p {
   left: 0;
 }
 @media screen and (min-width: 768px) {
+  .navbar {
+    height: 15rem;
+  }
   .nav--hamburger {
     display: none;
   }
@@ -238,7 +282,7 @@ p {
     padding: 0 2rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1080px) {
   .nav--btn {
     display: block;
     margin: 0;
@@ -406,6 +450,9 @@ p {
 
 /* ----------------------------------orange---------------------------------- */
 .orange {
+  background-image: url("/images/bg-simplify-section-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: left;
   background-color: var(--color-primary);
   padding-top: 10rem;
   padding-bottom: 9rem;
@@ -429,11 +476,19 @@ p {
     justify-self: right;
     display: block;
     margin: 0 0;
+    transition: all 0.2s ease;
+  }
+  .orange .btn:hover {
+    transform: scale(1.05);
+    color: var(--color-dark-blue);
   }
   .orange {
     display: grid;
     grid-template-columns: 3fr 1fr;
     align-items: center;
+    background-image: url("/images/bg-simplify-section-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: left;
   }
   .orange--title {
     font-size: 3.5rem;
@@ -447,7 +502,8 @@ p {
 /* ----------------------------------footer---------------------------------- */
 
 .footer {
-  padding: 0;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
   background-color: var(--color-dark-blue);
   text-align: center;
   display: flex;
@@ -477,14 +533,15 @@ p {
 }
 
 #footer--inputbox:focus {
-  outline: #ec7d62;
+  outline: none;
 }
 .footer.btn {
   padding: 1.5rem 3rem;
 }
 footer .grid2x1 {
   width: 80%;
-  height: 16rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: baseline;
   margin-left: 4rem;
@@ -501,7 +558,7 @@ footer .grid2x1 {
   transition: all 0.2s ease;
 }
 .footer--links:hover {
-  color: var(--color-pale-red);
+  color: var(--color-primary);
   font-size: 1.55rem;
 }
 .footer--link_items {
@@ -541,6 +598,7 @@ footer .grid2x1 {
       "logo links links input"
       "icons links links copyright";
     grid-template-columns: 1fr 1fr 1fr 1.2fr;
+    padding-bottom: 5rem;
   }
 
   .footer--logo {
@@ -555,6 +613,9 @@ footer .grid2x1 {
   .footer--icons {
     grid-area: icons;
     width: 16rem;
+  }
+  .footer--icons .icon {
+    padding: 4px;
   }
 
   .footer--copyright {
