@@ -404,6 +404,46 @@ p {
   }
 }
 
+/* ----------------------------------orange---------------------------------- */
+.orange {
+  background-color: var(--color-primary);
+  padding-top: 10rem;
+  padding-bottom: 9rem;
+}
+.orange--title {
+  font-size: 4.5rem;
+  color: var(--color-light-gray);
+  text-align: center;
+  padding: 1rem;
+}
+.orange .btn--primary {
+  background-color: var(--color-light-gray);
+  color: var(--color-primary);
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .orange .btn {
+    justify-self: right;
+    display: block;
+    margin: 0 0;
+  }
+  .orange {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+  }
+  .orange--title {
+    font-size: 3.5rem;
+    width: 70%;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+}
+
 /* ----------------------------------footer---------------------------------- */
 
 .footer {
