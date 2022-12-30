@@ -454,7 +454,7 @@ p {
 
 /* ----------------------------------orange---------------------------------- */
 .orange {
-  background-image: url("/images/bg-simplify-section-mobile.svg");
+  background-image: url("images/bg-simplify-section-mobile.svg");
   background-repeat: no-repeat;
   background-position: left;
   background-color: var(--color-primary);
@@ -490,7 +490,7 @@ p {
     display: grid;
     grid-template-columns: 3fr 1fr;
     align-items: center;
-    background-image: url("/images/bg-simplify-section-desktop.svg");
+    background-image: url("images/bg-simplify-section-desktop.svg");
     background-repeat: no-repeat;
     background-position: left;
     padding-top: 7rem;
