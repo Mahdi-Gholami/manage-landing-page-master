@@ -354,16 +354,16 @@ p {
 }
 .features--heading {
   width: 90%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   text-align: center;
 }
 @media screen and (min-width: 768px) {
   .features--heading {
-    width: 75%;
+    width: 80%;
     text-align: left;
   }
   .features--title {
-    font-size: 3.5rem;
+    font-size: 4rem;
     text-align: left;
     margin-top: 0;
   }
@@ -408,6 +408,10 @@ p {
   }
   .testimonial .btn {
     margin-bottom: 18rem;
+  }
+
+  .testimonial--title {
+    font-size: 4rem;
   }
 }
 
@@ -489,6 +493,8 @@ p {
     background-image: url("/images/bg-simplify-section-desktop.svg");
     background-repeat: no-repeat;
     background-position: left;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
   }
   .orange--title {
     font-size: 3.5rem;
@@ -598,7 +604,7 @@ footer .grid2x1 {
       "logo links links input"
       "icons links links copyright";
     grid-template-columns: 1fr 1fr 1fr 1.2fr;
-    padding-bottom: 5rem;
+    padding-bottom: 4rem;
   }
 
   .footer--logo {
